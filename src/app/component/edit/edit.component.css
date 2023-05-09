@@ -1,0 +1,20 @@
+p{
+  color: red;
+}
+select{
+  width: 540px;
+  height: 35px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border-color:  #e8e8e8;
+
+}
+input{
+  margin-top: 15px;
+  border-color: #e8e8e8;
+}
+button{
+  position: relative;
+  padding-left: 45%;
+  padding-right: 50%;
+}

@@ -1,0 +1,15 @@
+<table class="table">
+  <tbody>
+
+  <th>{{pets.id}}</th>
+  <td>{{pets.name}}</td>
+  <td>{{pets.code}}</td>
+  <td>{{pets.petType}}</td>
+  <td>{{pets.furColor}}</td>
+  <td>{{pets.country}}</td>
+  <td><button (click)="modalService.openEdit()" type="button" class="btn btn-primary">Edit pet</button></td>
+<!--<app-modal-for-edit *ngIf="modalService.isVisibleEdit$|async">
+</app-modal-for-edit>-->
+  </tbody>
+</table>
+

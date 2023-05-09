@@ -1,0 +1,28 @@
+
+<h2 style="text-align: center;">{{title|titlecase}}</h2>
+<div>
+  <div style="margin-left: 13%;">
+    <button (click)="modalService.open()" type="button" class="btn btn-primary">Add pet</button>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Code</th>
+      <th scope="col">Type</th>
+      <th scope="col">Fur color</th>
+      <th scope="col">Country</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    </table>
+  <app-pets *ngFor="let pet of pets" [pets]="pet" ></app-pets>
+  <app-modal *ngIf="modalService.isVisible$|async">
+    <app-create></app-create>
+  </app-modal>
+  </div>
+<footer>
+  <div style="text-align: center; margin: 5%;">© 2023 Wisercat </div>
+</footer>
+

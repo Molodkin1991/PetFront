@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input class="form-control" type="text" placeholder="Pet Name" aria-label="default input example" formControlName = "name">
+  <p *ngIf="formCont.name.touched && form.controls.name.errors">Enter name please</p>
+  <input class="form-control" type="number" placeholder="Pet Code" aria-label="default input example" formControlName = "code">
+  <p *ngIf="formCont.code.touched && form.controls.code.errors">Enter code please</p>
+  <select class="form-label" aria-label=".form-select-sm example" formControlName = "petType">
+    <option value="CAT">CAT</option>
+    <option value="DOG">DOG</option>
+    <option value="RABBIT">RABBIT</option>
+    <option value="HORSE">HORSE</option>
+  </select><br>
+  <p *ngIf="formCont.petType.touched && form.controls.petType.errors">Please select type</p>
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName = "furColor">
+    <option value="RED">RED</option>
+    <option value="BLACK">BLACK</option>
+    <option value="YELLOW">YELLOW</option>
+  </select><br>
+  <p *ngIf="formCont.furColor.touched && form.controls.furColor.errors">Please select color</p>
+  <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example" formControlName = "country">
+    <option value="ESTONIA">ESTONIA</option>
+    <option value="LATVIA">LATVIA</option>
+    <option value="LITHUA">LITHUA</option>
+    <option value="DANIA">DANIA</option>
+  </select><br>
+  <p *ngIf="formCont.country.touched && form.controls.country.errors">Please select country</p>
+  <button  *ngIf="form" type="submit" class="btn btn-primary">Add</button>
+</form>
